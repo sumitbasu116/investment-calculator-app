@@ -12,6 +12,6 @@ export class AppComponent {
   title = 'investment-calculator-app';
 
   printNameEntered(name:string){
-    console.log(name);
+    console.log("Inside app component "+name);
   }
 }
