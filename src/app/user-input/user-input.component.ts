@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 
 @Component({
@@ -8,5 +8,8 @@ import { FormsModule } from "@angular/forms";
   styleUrl: './user-input.component.css'
 })
 export class UserInputComponent {
+  onSubmit() {
+    console.log("SUBMITTED!!");
+  }
 
 }
