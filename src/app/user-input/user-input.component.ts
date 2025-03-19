@@ -9,13 +9,4 @@ import { FormsModule } from "@angular/forms";
 })
 export class UserInputComponent {
 
-  enteredName = '';
-  enteredSurName = '';
-
-  @Output() submitEventData=new EventEmitter<string>();
-
-  onSubmit(){
-    console.log("Inside onSubmit"+this.enteredName);
-    this.submitEventData.emit(this.enteredName);
-  }
 }
