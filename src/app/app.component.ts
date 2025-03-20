@@ -6,7 +6,7 @@ import { UserInput } from './user-input/userInput.model';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, UserInputComponent, InvestmentResultsComponent],
+  imports: [HeaderComponent, UserInputComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
