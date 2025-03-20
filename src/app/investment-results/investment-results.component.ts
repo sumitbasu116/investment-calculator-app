@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserInput } from '../user-input/userInput.model';
 
 @Component({
   selector: 'app-investment-results',
@@ -7,7 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './investment-results.component.css'
 })
 export class InvestmentResultsComponent {
+  consumeDataOnSubmitEvent(userInputData:UserInput){
 
+  }
 }
 // Use the below code as a help
 // e.g., integrate it into a service or component
