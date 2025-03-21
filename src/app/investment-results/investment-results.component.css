@@ -15,5 +15,9 @@ table {
   table tbody {
     font-family: "Roboto Condensed", sans-serif;
     font-size: 0.85rem;
-    color: #c2e9e0;
+    color: #0c5455;
+  }
+
+  .center-text {
+    text-align: center;
   }
