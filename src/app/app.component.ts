@@ -6,7 +6,7 @@ import { UserInput } from './user-input/userInput.model';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, UserInputComponent],
+  imports: [HeaderComponent, UserInputComponent, InvestmentResultsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -14,9 +14,20 @@ export class AppComponent {
 
   title = 'investment-calculator-app';
 
+  resultAnnualData?:{
+    year: number,
+    interest: number,
+    valueEndOfYear: number,
+    annualInvestment: number,
+    totalInterest: number,
+    totalAmountInvested: number,
+  }[];
+
   printNameEntered(name:string){
     console.log("Inside app component "+name);
   }
+
+
 
   calculateInvestmentResults(userInputData:UserInput) {
     
@@ -38,7 +49,6 @@ export class AppComponent {
         totalAmountInvested: userInputData.intialInvestment + userInputData.annualInvestment * year,
       });
     }
-    console.log(annualData);
-    return annualData;
+    this.resultAnnualData = annualData;
   }
 }
