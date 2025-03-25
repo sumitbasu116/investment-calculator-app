@@ -1,5 +1,6 @@
-import { Component, input, Input } from '@angular/core';
+import { Component, inject} from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
+import { InvestmentService } from '../investment.service';
 
 @Component({
   selector: 'app-investment-results',
@@ -9,13 +10,10 @@ import { CurrencyPipe } from '@angular/common';
 })
 export class InvestmentResultsComponent {
   
-  resultData = input<{
-    year: number,
-    interest: number,
-    valueEndOfYear: number,
-    annualInvestment: number,
-    totalInterest: number,
-    totalAmountInvested: number,
-  }[]|undefined>(undefined) ;
+ private investmentService=inject(InvestmentService);
+  
+  get resultData(){
+    return this.investmentService.resultAnnualData;
+  }
 
 }
