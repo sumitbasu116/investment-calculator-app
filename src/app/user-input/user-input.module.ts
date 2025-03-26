@@ -4,7 +4,8 @@ import { UserInputComponent } from "./user-input.component";
 
 @NgModule({
     declarations:[UserInputComponent],
-    imports:[FormsModule]
+    imports:[FormsModule],
+    exports:[UserInputComponent]
 })
 export class UserInputModule{
 
